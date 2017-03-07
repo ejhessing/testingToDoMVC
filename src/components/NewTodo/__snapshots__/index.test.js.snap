@@ -1,0 +1,12 @@
+exports[`NewTodo component renders a form 1`] = `
+<form
+  id="todo-form"
+  onSubmit={[Function]}>
+  <input
+    autoComplete="off"
+    className="new-todo"
+    onChange={[Function]}
+    placeholder="What needs to be done?"
+    value="Test title" />
+</form>
+`;
