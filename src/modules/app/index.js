@@ -14,22 +14,22 @@ import setFilter from './chains/setFilter'
 export default {
   state: {
     newTodoTitle: '',
-    todos: {},
+    todos: { },
     filter: 'all',
     isSaving: false
   },
   signals: {
     rootRouted: redirectToAll,
-    newTodoTitleChanged: setTitle,
+    newTodoTitleChanged: setTitle, //test
     newTodoSubmitted: submitTodo,
     todoNewTitleChanged: setTodoNewTitle,
     todoNewTitleSubmitted: overwriteTodoTitle,
-    removeTodoClicked: removeTodo,
-    todoDoubleClicked: editTodo,
+    removeTodoClicked: removeTodo, //test
+    todoDoubleClicked: editTodo, //test
     toggleAllChanged: toggleAllChecked,
-    toggleTodoCompletedChanged: toggleTodoCompleted,
+    toggleTodoCompletedChanged: toggleTodoCompleted, //test
     todoNewTitleAborted: stopEditingTodo,
     clearCompletedClicked: clearCompletedTodos,
-    filterClicked: setFilter
+    filterClicked: setFilter //test
   }
 }
