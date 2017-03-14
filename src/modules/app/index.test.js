@@ -2,7 +2,6 @@ import { RunSignal } from 'cerebral/test';
 
 import App from '.';
 
-
 describe('App module', () => {
   let runSignal;
 
@@ -20,18 +19,6 @@ describe('App module', () => {
         expect(state.app.filter).toBe('test value');
       });
   });
-});
-
-describe('Title', () => {
-  let runSignal;
-
-  beforeEach(() => {
-    runSignal = RunSignal({
-      modules: {
-        app: App
-      }
-    });
-  });
 
   it('sets the title', () => {
     return runSignal('app.newTodoTitleChanged', { title: 'test' })
@@ -39,9 +26,10 @@ describe('Title', () => {
         expect(state.app.newTodoTitle).toBe('test');
       });
   });
-})
+});
 
-describe('With state', () => {    
+
+describe('Tests with stubbed state', () => {    
   const ref = 'dcfd5863-790c-4ae2-8183-a47b85802495';
   let runSignal;
 
@@ -80,7 +68,7 @@ describe('With state', () => {
       })
   });
 
-  it('toggle completed', () => {
+  it('toggle completed to be true', () => {
     return runSignal('app.toggleTodoCompletedChanged', { ref })
       .then(({ state }) => {
         expect(state.app.todos[ref].completed).toBe(true);
