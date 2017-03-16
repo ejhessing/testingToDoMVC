@@ -5,8 +5,8 @@ import createTodo from '../actions/createTodo'
 import postTodo from '../actions/postTodo'
 
 export default [
-  createTodo,
-  set(state`app.newTodoTitle`, ''),
+  createTodo, //test
+  set(state`app.newTodoTitle`, ''), //test
   set(state`app.isSaving`, true),
   postTodo, {
     success: [
@@ -22,5 +22,5 @@ export default [
       })
     ]
   },
-  set(state`app.isSaving`, false)
+  set(state`app.isSaving`, false) //test
 ]

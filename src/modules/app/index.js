@@ -21,15 +21,15 @@ export default {
   signals: {
     rootRouted: redirectToAll,
     newTodoTitleChanged: setTitle, //test
-    newTodoSubmitted: submitTodo,
-    todoNewTitleChanged: setTodoNewTitle,
-    todoNewTitleSubmitted: overwriteTodoTitle,
+    newTodoSubmitted: submitTodo, //partly tested
+    todoNewTitleChanged: setTodoNewTitle, //test
+    todoNewTitleSubmitted: overwriteTodoTitle, //test
     removeTodoClicked: removeTodo, //test
     todoDoubleClicked: editTodo, //test
-    toggleAllChanged: toggleAllChecked,
+    toggleAllChanged: toggleAllChecked, //test
     toggleTodoCompletedChanged: toggleTodoCompleted, //test
-    todoNewTitleAborted: stopEditingTodo,
-    clearCompletedClicked: clearCompletedTodos,
+    todoNewTitleAborted: stopEditingTodo, //test
+    clearCompletedClicked: clearCompletedTodos, //test
     filterClicked: setFilter //test
   }
 }
